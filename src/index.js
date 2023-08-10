@@ -1,13 +1,19 @@
-import React from "react";
-import ReactDOM  from "react-dom/client";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Book from './Book'
 
-const divRoot = document.getElementById('root');
-const root = ReactDOM.createRoot(divRoot);
+import './index.css'
 
-const Greeting = () => {
-     return <h2>My First </h2>;
-};
+const divRoot = document.getElementById('root')
+const root = ReactDOM.createRoot(divRoot)
 
-root.render(<Greeting/>)
-
-// export default Greeting;
+const BookList = () => (
+  <section className="booklist">
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+  </section>
+)
+root.render(<BookList />)
